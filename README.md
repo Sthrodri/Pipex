@@ -2,7 +2,16 @@
 
 Simulação do mecanismo de pipe (`|`) do Unix em C. O projeto replica o comportamento exato do shell ao conectar a saída de um comando à entrada de outro via redirecionamento de file descriptors.
 
-![Pipex Flow](https://mermaid.ink/img/pako:eNpVkM1qwzAQhF9F7LkF8gI-FNoWSiGQ0kvJYYztaqUQSUZaU0Lwu1f_5JAeetLszOzOaC605hRoR9v6UfO1Zg_zW0U5X573nC-eL2z2zG7sE4d5_8L2Yd-Sj-fLhY1f9gO7bcnW9MvuYfdD_8I2T0f2sH9ma4J8O-n-1WhD8eQ40Y2S8oGgQ0-D1h0tDFAkKxhI2OOnQ48Gg7TwUv_2L6DXGi0seAixQz3MIF32nMhW0R0F9uS_v-VPZcspP6qCykVlQfWgCioXlQXVg6pI5aK6oJpQJb2aU11Q32q0bw0th118jOQ40nOkl0jHSE8jPYf0Muk40stIz5FeJR1H-n8lp8i6qO34s34BmVh34w?type=png)
+```mermaid
+graph LR
+    In[infile] -->|stdin| Cmd1(cmd1)
+    Cmd1 -->|write| Pipe{PIPE}
+    Pipe -->|read| Cmd2(cmd2)
+    Cmd2 -->|stdout| Out[outfile]
+
+    style Pipe fill:#f96,stroke:#333,stroke-width:2px
+    style Cmd1 fill:#bbf,stroke:#333,stroke-width:2px
+    style Cmd2 fill:#bbf,stroke:#333,stroke-width:2px
 
 ## 📋 Descrição
 
@@ -84,5 +93,6 @@ A sintaxe é estrita e exige exatamente 4 argumentos:
 * **`pipex.h`**: Headers, structs e declarações de funções.
 
 ```
+
 
 ```
