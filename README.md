@@ -12,6 +12,7 @@ graph LR
     style Pipe fill:#f96,stroke:#333,stroke-width:2px
     style Cmd1 fill:#bbf,stroke:#333,stroke-width:2px
     style Cmd2 fill:#bbf,stroke:#333,stroke-width:2px
+```
 
 ## 📋 Descrição
 
@@ -96,3 +97,4 @@ A sintaxe é estrita e exige exatamente 4 argumentos:
 
 
 ```
+
